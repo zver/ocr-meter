@@ -379,9 +379,9 @@ class Zaehlerstand:
 
     def DigitalReadoutToValue(self, res_digital, UsePreValue, lastnachkomma, aktnachkomma):
         erg = ''
-        if UsePreValue and (len(self.LastVorkomma) > 0) and (len(self.LastNachkomma) > 0):
-            last = int(lastnachkomma[0:1])
-            aktu = int(aktnachkomma[0:1])
+        if UsePreValue and (len(str(self.LastVorkomma)) > 0) and (len(str(self.LastNachkomma)) > 0):
+            last = int(str(lastnachkomma)[0:1])
+            aktu = int(str(aktnachkomma)[0:1])
             if aktu < last:
                 overZero = 1
             else:
