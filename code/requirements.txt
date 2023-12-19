@@ -1,4 +1,6 @@
 requests
 Pillow
+tensorflow==2.13.1
+
 
 
