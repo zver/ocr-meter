@@ -1,0 +1,10 @@
+services:
+  ocr-meter:
+    image: ocr-meter
+    container_name: ocr-meter
+    volumes:
+      - /etc/ha/ocr-meter/config:/ocr-meter/config
+      - /etc/ha/ocr-meter/log:/ocr-meter/log
+    restart: always
+    ports:
+      - "3000:3000"
