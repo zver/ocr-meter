@@ -87,8 +87,6 @@ class ReadDigitalDigit:
         K.clear_session()
         if result == 10:
             result = "NaN"
-        else:
-            result = result[0]
         return result
 
     def saveLogImage(self, image, value, logtime):
