@@ -83,7 +83,7 @@ class ReadDigitalDigit:
         test_image.save('./image_tmp/resize.jpg', "JPEG")
         test_image = np.array(test_image, dtype="float32")
         img = np.reshape(test_image,[1,32,20,3])
-        result = self.model.predict_classes(img)
+        result = np.argmax(self.model.predict(img))
         K.clear_session()
         if result == 10:
             result = "NaN"
