@@ -2,10 +2,9 @@ FROM debian:bullseye
 
 WORKDIR /ocr-meter
 
-RUN mkdir -p ./log ./image_tmp
+RUN mkdir -p ./log ./image_tmp ./config
 COPY code/wasseruhr.py .
 COPY code/lib ./lib
-COPY code/config ./config
 COPY code/config_default ./config_default
 COPY code/requirements.txt .
 RUN apt-get update && apt-get -y install python3 python3-pip ninja-build python3-opencv
