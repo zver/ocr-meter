@@ -106,7 +106,7 @@ class Zaehlerstand:
         if self.AnalogReadOutEnabled:
             config['PreValue']['LastNachkomma'] = self.LastNachkomma
         else:
-            config['PreValue']['LastNachkomma'] = 0
+            config['PreValue']['LastNachkomma'] = '0'
         config['PreValue']['Time'] = logtime
         with open('./config/prevalue.ini', 'w') as cfg:
             config.write(cfg)
